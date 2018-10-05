@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block heading %}Summary{% endblock %}
+
+{% block content %}
+<a href="/summary"><button type="button" class="btn btn-primary {% if active == 'summary' %}active{% endif %}">Sum</button></a>
+<a href="/summary-average"><button type="button" class="btn btn-primary {% if active == 'average' %}active{% endif %}">Average</button></a>
+<table class="table">
+    <thead>
+    <tr>
+        <td>Site</td>
+        <td>A Value</td>
+        <td>B Value</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in object_list %}
+    <tr>
+        <td>{{ i }}</td>
+        <td>{{ i.a_value }}</td>
+        <td>{{ i.b_value}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

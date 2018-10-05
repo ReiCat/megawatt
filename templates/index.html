@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if active == 'sites' %}active{% endif %}">
+        <a class="nav-link" href="/sites">Sites<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% if active == 'summary' or active == 'average' %}active{% endif %}">
+        <a class="nav-link" href="/summary">Summary</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}{% endblock %}

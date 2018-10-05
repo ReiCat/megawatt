@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block heading %}Site Details - {{ object }}{% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <td>Date</td>
+        <td>A Value</td>
+        <td>B Value</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in object.values.all %}
+    <tr>
+        <td>{{ i.date }}</td>
+        <td>{{ i.a_value }}</td>
+        <td>{{ i.b_value}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

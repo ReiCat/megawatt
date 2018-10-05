@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block heading %}Sites{% endblock %}
+
+{% block content %}
+<ul class="list-group">
+{% for i in object_list %}
+    <li class="list-group-item"><a href="/sites/{{ i.id }}">{{ i }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
